@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>小组成员</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/contactlist.css" media="all" />
+    <script src="../static/js/zepto.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+            $.get( "http://m.gzuni.com/services/dev_id?app_id=wx_comm", function( data ) {
+                var myJson = data;
+                if( myJson.result == true ) {
+                    var enc_dev_info = eval('('+myJson.enc_dev_info+')');
+                    var phoneid = enc_dev_info.dev_id;
+                    $.post ( "tsession", {'name':'phone','value':phoneid} );
+                    alert( "识别到当前用户：" + phoneid );
+                    $("#currentuser").text("当前用户："+phoneid);
+                }
+                else {
+                    redirectURL = window.location.pathname;
+                    $.post ( "tsession", {'name':'redirectURL','value':redirectURL} );
+                    window.location.href = "/auth"; 
+                }
+            }, 'json');            
+});
+
+</script>
+
+</head>
+<body>
+    <div class="lock_wrp" id="lock" style="display: none;">
+        <div class="lock">
+            <i></i><br>
+            为了更好体验，请使用竖屏浏览
+            </div>
+    </div>
+    <div class="wrapper">
+    <div class="header">
+    <p>小组成员</p></div>
+    <div class="QA">
+
+       <div class="clear" style="height:1px;"></div>
+        <div class="question1">
+        <div class="title">
+        <div class="type">234</div>
+        <div class="time">234</div>
+        <div class="sum">34</div></div></div>
+
+    <div class="clear" style="height:1px;"></div>
+    </div>
+    </div>
+
+
+</body>
+
+
+</html>
