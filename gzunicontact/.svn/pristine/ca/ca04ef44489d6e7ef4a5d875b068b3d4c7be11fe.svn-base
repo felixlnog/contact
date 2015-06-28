@@ -22,16 +22,8 @@
                 <br>为了更好体验，请使用竖屏浏览</div>
         </div>
         <div class="wrapper background">
-                {% if contact.year=='2014' %} 
-                    <p id="welcome">{{contact.name}}老腊肉
-                    <br>欢迎回到第{{contact.groupid}}组<br>欢迎回到广州联通</p>
-                {% elif contact.year=='2015' %}
-                    <p id="welcome">{{contact.name}}小鲜肉
-                    <br>欢迎加入第{{contact.groupid}}组<br>欢迎加入广州联通</p>
-                {% else %}
-                    <p id="welcome">你是谁？</p>
-                {% endif %} 
-            
+            <p id="welcome">{{contact.name}}老鲜肉
+                <br>欢迎加入第{{contact.groupid}}组<br>欢迎加入广州联通</p>
         </div>
         <script src="../static/js/jquery-1.11.0.min.js"></script>
         <script src="../static/js/fakeLoader.min.js"></script>

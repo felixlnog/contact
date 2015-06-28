@@ -17,6 +17,7 @@ create table contact (
     `college` varchar(50) not null,
     `headman` bool not null,
     `groupid` varchar(50) not null,
+    `year` varchar(50) not null,
     primary key (`id`)
 ) engine=innodb default charset=utf8;
 -- email / password:
