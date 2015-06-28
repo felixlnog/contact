@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>第{{group}}组成员</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/contactlist.css" media="all" />
+    <script src="../static/js/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+    <div class="lock_wrp" id="lock" style="display: none;">
+        <div class="lock">
+            <i></i><br>
+            为了更好体验，请使用竖屏浏览
+            </div>
+    </div>
+    <div class="wrapper">
+    <div class="QA">
+        {% for contact in contactlist %}
+        <div class="question1">
+            <div class="title">
+                <div class="name">{{contact.name}}</div>
+                <div class="tel">{{contact.tel}}</div>
+                <span>{{contact.sex}}|{{contact.college}}</span>
+                <div class="work_tel">{{contact.work_tel}}</div>
+            </div>
+        </div>
+        {% endfor %}
+        <div class="clear" style="height:1px;"></div>
+        <div class="question1">
+            <div class="title">
+                <div class="name">龙帆</div>
+                <div class="tel">15622333237</div>
+                <span>男|重庆大学</span>
+                <div class="work_tel">18620011701</div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

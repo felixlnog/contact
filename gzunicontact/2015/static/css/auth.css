@@ -1,0 +1,138 @@
+auth.csshtml,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-size: 14px;
+    background-color: #fdf8e4;
+    font-family: Helvetica,STHeiti STXihei, Microsoft JhengHei, Microsoft YaHei, Arial;
+}
+
+@media only screen and (max-height:479px)
+{
+    body
+    {
+        font-size: 12px;
+    }
+}
+/* portrait */
+@media screen and (orientation:portrait)
+{
+/*竖屏*/
+    .lock_wrp
+    {
+        display: none!important;
+    }
+}
+/* landscape */
+@media screen and (orientation:landscape)
+{
+/*横屏*/
+    .wrapper
+    {
+        display: none!important;
+    }
+}
+
+
+
+.wrapper
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color:#fdf8e4; 
+    text-align:center;
+}
+
+.wrapper .header
+{
+    position: absolute;
+    width:100%;
+    height: 46px;
+    background-color:#ff6f55;
+    color:#fdf8e4;
+}
+
+.wrapper .header p
+{
+    font-size:40px;
+    font-weight:bold;
+    margin: auto;
+}
+
+.wrapper .QA
+{
+    padding:0 0 0 0;
+    width: 90%;
+    position: absolute;
+    top: 60px;
+    bottom: 0px;
+    left: 5%;
+    
+}
+
+.wrapper .title
+{
+    position: relative;
+    width:100%;
+    margin-top:-8px;
+    margin-bottom:-10px;
+    text-align:left;
+    background-color:#42150a;
+    color:#fdf8e4;
+}
+.wrapper .title p
+{   
+    margin-left:20px;
+    padding:5px 4px 5px 0;
+    font-size:20px; 
+    text-align:left;
+}
+.icon
+{
+    background:url(./Q&A/back.png) center center no-repeat;
+    position:absolute;
+    width:40px;
+    background-size:contain;
+    height:40px;
+}
+
+.user
+{
+    margin:-4px 0 0 60%;
+    height:16px;
+}
+.user img
+{
+    margin-bottom:-3px;
+}
+
+.wrapper textarea
+{
+    width:100%;
+    height:40px;
+    border-style:none;
+    padding: 0;
+    text-align: center;
+    background:#e9eee0;
+    font-size:32px;
+}  
+
+.wrapper .OK
+{
+    margin-top:-20px;
+    height: 36px;
+    background-color:#bbd9cf;
+    color:#42150a;
+    text-align: center;
+}
+.wrapper .OK p
+{
+    padding-top: 3px;
+    font-size:26px;
+    font-style:bold;
+}

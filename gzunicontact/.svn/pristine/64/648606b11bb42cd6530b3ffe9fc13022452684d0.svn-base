@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>欢迎鲜橙</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/auth.css" media="all" />
+</head>
+<body>
+    <div class="wrapper">
+            <div class="QA">
+                <div class="question1">
+                    <div class="title">
+                        <p>请输入应聘电话或员工号码</p>
+                    </div>
+                    <form id="question" name="question" action="./OK.php" method="POST">
+                        <textarea id="account" name="account" autofocus="autofocus" rows="1" cols="30" maxlength=500 ></textarea>
+                        <div class="OK" onclick="mySubmit()">
+                            <p>提  交</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+<script src="../static/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+
+                function mySubmit(){
+                    if (document.getElementById("account").value == "") {
+                        alert("输入电话号码不能为空");
+                        document.getElementById("account").focus();
+                        return false;
+                    }else {
+                        document.question.submit();
+
+                    }
+
+                }
+</script>
+</body>
+
+</html>
